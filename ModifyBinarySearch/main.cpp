@@ -9,7 +9,7 @@ int main()
 {
     std::vector<int> vector(100000000); // 0.1 milliard
     for (size_t i = 0; i < vector.size(); ++i)
-        vector[i] = i + 1;
+        vector[i] = (i + 1) * 5;
     /*for (size_t i = 0; i < vector.size(); ++i)
         std::cout << vector[i] << ' ';*/
 
@@ -17,17 +17,17 @@ int main()
 
     while (value != -1)
     {
-        std::cout << std::endl << "choose value before\n" << vector.size() << ": \n";
+        std::cout << std::endl << "choose value before\n" << vector.back() << ": \n";
         std::cin >> value;
 
         auto begin = std::chrono::steady_clock::now();
-        auto result = ModifyBinarySearch(vector, value);
+        auto result = ModifyBinarySearch(&vector.front(), &vector.back(), value);
         auto end = std::chrono::steady_clock::now();
     
         if (result.has_value())
             std::cout << "result is " << result.value() << std::endl;
         else
             std::cout << "error" << std::endl;
-        std::cout << "working time is " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
+        std::cout << "working time is " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin) << std::endl;
     }
 }
