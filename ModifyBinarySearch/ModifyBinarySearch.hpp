@@ -1,7 +1,14 @@
 #pragma once
-#include <vector>
 #include <optional>
 
+/// <summary>
+/// binary search, but looks in powers of 2
+/// </summary>
+/// <typeparam name="T"> has operator '>', '>=', '<', '<=', '==' </typeparam> 
+/// <param name="iter_start"> pointer on first element in array </param>
+/// <param name="iter_end"> pointer on last element in array </param>
+/// <param name="value"> value, which we searcihg </param>
+/// <returns> index of value in array </returns>
 template<typename T>
 std::optional<size_t> ModifyBinarySearch(void* iter_start, void* iter_end, T value)
 {
