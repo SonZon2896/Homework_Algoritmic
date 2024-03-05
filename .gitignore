@@ -4,7 +4,6 @@ Matrix_4x4/x64
 Vector_4/Vector4/x64
 Vector_4/x64
 ModifyBinarySearch/ModifyBi.2410513d
-*.vcxproj
+Debug
 *.filters
 *.user
-Debug
