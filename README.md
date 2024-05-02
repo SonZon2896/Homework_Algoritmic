@@ -8,3 +8,5 @@
 * Task: you have scope which length - k, it moving  right on vector, which length - n (n >= k). Need to pring min and max number in scope.
 * Realisation: 2 Deque - min and max.
 * to run this you need to compile cpp file or start it from Visaul Studio and choose .sln file
+## 5 homework - HashSet.
+* to run this you need to compile cpp file in HashSet or start it from Visaul Studio and choose .sln file
